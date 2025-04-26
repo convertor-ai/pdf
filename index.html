@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free PDF Converter - Convert PDFs Online</title>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_ADSENSE_ID" crossorigin="anonymous"></script>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-YOUR_ADSENSE_ID",
+            enable_page_level_ads: true
+        });
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Modern CSS Reset */
         :root {
             --primary: #4361ee;
             --primary-light: #4895ef;
@@ -27,14 +34,10 @@
             --radius-sm: 4px;
         }
 
-        *, *::before, *::after {
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
         }
 
         body {
@@ -42,26 +45,16 @@
             line-height: 1.6;
             color: var(--dark);
             background-color: var(--light);
-            overflow-x: hidden;
         }
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        button, input, textarea {
-            font-family: inherit;
-            outline: none;
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .container {
@@ -69,58 +62,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 1.5rem;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: var(--radius-sm);
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .btn-outline {
-            background-color: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        .btn-accent {
-            background-color: var(--accent);
-            color: white;
-        }
-
-        .btn-accent:hover {
-            background-color: #d91a6d;
-        }
-
-        /* Header Styles */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background-color: white;
-            box-shadow: var(--shadow-sm);
-            padding: 1rem 0;
         }
 
         .navbar {
@@ -139,10 +80,6 @@
         }
 
         .logo i {
-            color: var(--accent);
-        }
-
-        .logo span {
             color: var(--accent);
         }
 
@@ -178,25 +115,80 @@
             gap: 1rem;
         }
 
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* Top Banner Ad */
+        .top-banner-ad {
+            background-color: #f0f2f5;
+            padding: 0.5rem 0;
+            text-align: center;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .ad-container {
+            margin: 0 auto;
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ad-label {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
         /* Hero Section */
         .hero {
-            padding: 5rem 0 3rem;
+            padding: 3rem 0;
             text-align: center;
             background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
         }
 
         .hero h1 {
-            font-size: 2.75rem;
+            font-size: 2.5rem;
             margin-bottom: 1.5rem;
             line-height: 1.2;
-            color: var(--dark);
         }
 
         .hero p {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             color: var(--gray);
             max-width: 700px;
-            margin: 0 auto 2.5rem;
+            margin: 0 auto 2rem;
         }
 
         /* Converter Box */
@@ -207,11 +199,6 @@
             padding: 2rem;
             max-width: 800px;
             margin: 0 auto 3rem;
-            transition: var(--transition);
-        }
-
-        .converter-box:hover {
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
 
         .converter-tabs {
@@ -233,7 +220,6 @@
             color: var(--gray);
             border-bottom: 3px solid transparent;
             white-space: nowrap;
-            transition: var(--transition);
         }
 
         .tab:hover {
@@ -269,7 +255,6 @@
 
         .file-drop-area h3 {
             margin-bottom: 0.75rem;
-            color: var(--dark);
             font-size: 1.5rem;
         }
 
@@ -322,12 +307,6 @@
             border: 1px solid var(--light-gray);
             border-radius: var(--radius-sm) 0 0 var(--radius-sm);
             font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .url-input input:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
         }
 
         .url-input button {
@@ -338,27 +317,29 @@
             border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
             cursor: pointer;
             font-weight: 600;
-            transition: var(--transition);
         }
 
-        .url-input button:hover {
-            background-color: var(--secondary);
+        /* Mid-Page Banner Ad */
+        .mid-banner-ad {
+            background-color: #f8f9fa;
+            padding: 1rem 0;
+            margin: 2rem 0;
+            text-align: center;
         }
 
         /* Features Section */
         .features {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background-color: white;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .section-title h2 {
-            font-size: 2.25rem;
-            color: var(--dark);
+            font-size: 2rem;
             margin-bottom: 1rem;
         }
 
@@ -366,7 +347,6 @@
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
-            font-size: 1.125rem;
         }
 
         .features-grid {
@@ -394,14 +374,10 @@
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .feature-card h3 {
             margin-bottom: 1rem;
-            color: var(--dark);
             font-size: 1.25rem;
         }
 
@@ -410,9 +386,16 @@
             font-size: 0.9375rem;
         }
 
+        /* In-Content Ad */
+        .in-content-ad {
+            margin: 3rem auto;
+            text-align: center;
+            max-width: 728px;
+        }
+
         /* Testimonials */
         .testimonials {
-            padding: 5rem 0;
+            padding: 3rem 0;
             background-color: #f8f9ff;
         }
 
@@ -443,7 +426,6 @@
         .testimonial-content {
             margin-bottom: 1.5rem;
             font-style: italic;
-            color: var(--dark);
             position: relative;
             z-index: 1;
         }
@@ -462,7 +444,6 @@
         }
 
         .author-info h4 {
-            color: var(--dark);
             margin-bottom: 0.25rem;
         }
 
@@ -473,14 +454,14 @@
 
         /* CTA Section */
         .cta {
-            padding: 5rem 0;
+            padding: 4rem 0;
             text-align: center;
             background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
         }
 
         .cta h2 {
-            font-size: 2.25rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
@@ -488,7 +469,6 @@
             max-width: 600px;
             margin: 0 auto 2rem;
             opacity: 0.9;
-            font-size: 1.125rem;
         }
 
         .cta-buttons {
@@ -501,14 +481,14 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 4rem 0 2rem;
+            padding: 3rem 0 1.5rem;
         }
 
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 2rem;
+            margin-bottom: 2rem;
         }
 
         .footer-logo {
@@ -554,7 +534,6 @@
         .footer-column h3 {
             font-size: 1.125rem;
             margin-bottom: 1.5rem;
-            color: white;
         }
 
         .footer-links li {
@@ -574,20 +553,24 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #a1a1aa;
             font-size: 0.875rem;
+        }
+
+        /* Bottom Banner Ad */
+        .bottom-banner-ad {
+            background-color: #f0f2f5;
+            padding: 1rem 0;
+            text-align: center;
+            border-top: 1px solid var(--light-gray);
         }
 
         /* Responsive Styles */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 2.25rem;
-            }
-            
-            .hero p {
-                font-size: 1.125rem;
             }
         }
 
@@ -602,12 +585,12 @@
                 justify-content: center;
             }
 
-            .hero {
-                padding: 3rem 0 2rem;
-            }
-
             .hero h1 {
                 font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
             }
 
             .converter-box {
@@ -632,6 +615,11 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            /* Adjust ad containers for mobile */
+            .ad-container {
+                min-height: 50px;
+            }
         }
 
         @media (max-width: 576px) {
@@ -643,10 +631,6 @@
                 font-size: 1.75rem;
             }
 
-            .hero p {
-                font-size: 1rem;
-            }
-
             .section-title h2 {
                 font-size: 1.75rem;
             }
@@ -656,30 +640,79 @@
             }
         }
 
-        /* Animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        /* AdSense responsive ads */
+        .adslot {
+            width: 100%;
+            margin: 1rem 0;
         }
 
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
+        .adslot-1 {
+            height: 90px;
         }
 
-        .delay-1 {
-            animation-delay: 0.2s;
+        .adslot-2 {
+            height: 250px;
         }
 
-        .delay-2 {
-            animation-delay: 0.4s;
+        .adslot-3 {
+            height: 90px;
         }
 
-        .delay-3 {
-            animation-delay: 0.6s;
+        @media (min-width: 728px) {
+            .adslot-1 {
+                width: 728px;
+                height: 90px;
+            }
+
+            .adslot-2 {
+                width: 728px;
+                height: 90px;
+            }
+
+            .adslot-3 {
+                width: 728px;
+                height: 90px;
+            }
+        }
+
+        @media (min-width: 300px) and (max-width: 727px) {
+            .adslot-1 {
+                width: 300px;
+                height: 250px;
+            }
+
+            .adslot-2 {
+                width: 300px;
+                height: 250px;
+            }
+
+            .adslot-3 {
+                width: 300px;
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Top Banner Ad -->
+    <div class="top-banner-ad">
+        <div class="container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-container">
+                <!-- AdSense Ad Unit 1 -->
+                <ins class="adsbygoogle adslot adslot-1"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID_1"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -688,25 +721,24 @@
                     <i class="fas fa-file-pdf"></i>
                     Free<span>PDF</span>Convert
                 </a>
-               </nav>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1 class="fade-in">Convert PDFs to Editable Files in Seconds</h1>
-            <p class="fade-in delay-1">The most accurate online PDF to Word, Excel, PowerPoint and image converter. Free to use, no watermarks.</p>
+            <h1>Convert PDFs to Editable Files in Seconds</h1>
+            <p>The most accurate online PDF to Word, Excel, PowerPoint and image converter. Free to use, no watermarks.</p>
             
             <!-- Converter Box -->
-            <div class="converter-box fade-in delay-2">
+            <div class="converter-box">
                 <div class="converter-tabs">
                     <div class="tab active">PDF to Word</div>
                     <div class="tab">PDF to Excel</div>
                     <div class="tab">PDF to PPT</div>
                     <div class="tab">PDF to JPG</div>
-                    <div class="tab">PDF to PNG</div>
-                                </div>
+                </div>
                 
                 <div class="file-drop-area" id="dropArea">
                     <i class="fas fa-cloud-upload-alt"></i>
@@ -720,11 +752,30 @@
                 
                 <div class="url-input">
                     <input type="text" placeholder="Enter PDF URL (e.g., https://example.com/file.pdf)">
-                    <button class="btn btn-accent">Convert</button>
+                    <button class="btn btn-primary">Convert</button>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Mid-Page Banner Ad -->
+    <div class="mid-banner-ad">
+        <div class="container">
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-container">
+                <!-- AdSense Ad Unit 2 -->
+                <ins class="adsbygoogle adslot adslot-2"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID_2"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
 
     <!-- Features Section -->
     <section class="features">
@@ -762,12 +813,29 @@
         </div>
     </section>
 
+    <!-- In-Content Ad -->
+    <div class="in-content-ad">
+        <div class="container">
+            <div class="ad-label">Advertisement</div>
+            <!-- AdSense Ad Unit 3 -->
+            <ins class="adsbygoogle adslot adslot-3"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID_3"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <div class="section-title">
                 <h2>Trusted by Millions Worldwide</h2>
-                <p>Join 10+ million users who rely on our PDF converter daily</p>
+                <p>Join 10+ million users who rely on our converter daily</p>
             </div>
             
             <div class="testimonial-grid">
@@ -819,11 +887,28 @@
             <h2>Ready to Convert Your PDFs?</h2>
             <p>Join millions of professionals and students who use our converter daily</p>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary btn-large">Convert Files Now</a>
-                <a href="#" class="btn btn-outline btn-large">Learn More</a>
+                <a href="#" class="btn btn-primary">Convert Files Now</a>
+                <a href="#" class="btn btn-outline">Learn More</a>
             </div>
         </div>
     </section>
+
+    <!-- Bottom Banner Ad -->
+    <div class="bottom-banner-ad">
+        <div class="container">
+            <div class="ad-label">Advertisement</div>
+            <!-- AdSense Ad Unit 4 -->
+            <ins class="adsbygoogle adslot adslot-1"
+                 style="display:block"
+                 data-ad-client="ca-pub-YOUR_ADSENSE_ID"
+                 data-ad-slot="YOUR_AD_SLOT_ID_4"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -895,18 +980,14 @@
     </footer>
 
     <script>
-        // Modern JavaScript with improved functionality
         document.addEventListener('DOMContentLoaded', function() {
             // Tab Switching
             const tabs = document.querySelectorAll('.tab');
             tabs.forEach(tab => {
                 tab.addEventListener('click', function() {
-                    // Remove active class from all tabs
                     tabs.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked tab
                     this.classList.add('active');
                     
-                    // Update the converter box heading
                     const converterHeading = document.querySelector('.file-drop-area h3');
                     const format = this.textContent.replace('PDF to ', '');
                     converterHeading.textContent = `Drag & Drop PDF to convert to ${format}`;
@@ -917,7 +998,6 @@
             const dropArea = document.getElementById('dropArea');
             const fileInput = document.getElementById('fileInput');
 
-            // Highlight drop area when item is dragged over it
             ['dragenter', 'dragover'].forEach(eventName => {
                 dropArea.addEventListener(eventName, highlight, false);
             });
@@ -926,15 +1006,11 @@
                 dropArea.addEventListener(eventName, unhighlight, false);
             });
 
-            // Prevent default drag behaviors
             ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
                 dropArea.addEventListener(eventName, preventDefaults, false);
             });
 
-            // Handle dropped files
             dropArea.addEventListener('drop', handleDrop, false);
-
-            // Handle file selection via button
             fileInput.addEventListener('change', handleFiles);
 
             function highlight() {
@@ -961,7 +1037,6 @@
                     const file = files[0];
                     if (file.type === 'application/pdf') {
                         showSuccessMessage(`Ready to convert: ${file.name}`);
-                        // Here you would typically upload the file to your server
                     } else {
                         showErrorMessage('Please select a PDF file.');
                     }
@@ -979,7 +1054,6 @@
                 if (url) {
                     if (isValidPdfUrl(url)) {
                         showSuccessMessage(`Processing PDF from URL: ${url}`);
-                        // Here you would typically send the URL to your server for processing
                     } else {
                         showErrorMessage('Please enter a valid PDF URL (should end with .pdf)');
                     }
@@ -1003,22 +1077,17 @@
             }
 
             function showNotification(message, type) {
-                // Remove any existing notifications
                 const existingNotif = document.querySelector('.notification');
                 if (existingNotif) {
                     existingNotif.remove();
                 }
 
-                // Create notification element
                 const notif = document.createElement('div');
                 notif.className = `notification ${type}`;
                 notif.textContent = message;
                 
-                // Add to converter box
-                const converterBox = document.querySelector('.converter-box');
-                converterBox.appendChild(notif);
+                document.body.appendChild(notif);
                 
-                // Auto remove after 5 seconds
                 setTimeout(() => {
                     notif.classList.add('fade-out');
                     setTimeout(() => notif.remove(), 300);
@@ -1066,23 +1135,8 @@
             `;
             document.head.appendChild(style);
 
-            // Animate elements on scroll
-            const animateOnScroll = function() {
-                const elements = document.querySelectorAll('.fade-in:not(.animated)');
-                
-                elements.forEach(element => {
-                    const elementPosition = element.getBoundingClientRect().top;
-                    const screenPosition = window.innerHeight / 1.2;
-                    
-                    if (elementPosition < screenPosition) {
-                        element.classList.add('animated');
-                    }
-                });
-            };
-
-            window.addEventListener('scroll', animateOnScroll);
-            // Trigger once on load
-            animateOnScroll();
+            // Initialize all AdSense ads
+            (adsbygoogle = window.adsbygoogle || []).push({});
         });
     </script>
 </body>
